@@ -8,7 +8,10 @@ router.post('/portfolio', auth, async (req, res) => {
     const user = await User.findById(req.user.id);
     user.portfolio = req.body;
     await user.save();
-    res.json({ message: 'Portfolio saved' });
+    res.json({ 
+      message: 'Portfolio saved',
+      portfolio: user.portfolio
+    });
   } catch (err) {
     res.status(500).json({ error: 'Failed to save portfolio' });
   }
