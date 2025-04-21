@@ -7,14 +7,13 @@ const UserSchema = new mongoose.Schema({
   portfolio: {
     name: String,
     bio: String,
-    
     skills: [String], // ✅ Skills array remains as is
 
     education: [       // ✅ New education array
       {
-        course: String,
-        school: String,
-        yearOfPassing: String, // You can also use Number if preferred
+        degree: String,
+        institution: String,
+        passingYear: String, // You can also use Number if preferred
       }
     ],
 
