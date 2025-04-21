@@ -15,7 +15,6 @@ const UserSchema = new mongoose.Schema({
             liveDemo: String,
             }
         ],
-        certifications: [String],
         template: String
     }
 });
